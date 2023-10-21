@@ -1,26 +1,19 @@
 'use client';
-import React from 'react';
+import {
+  placeholder,
+  BASE_URL,
+  sortBy,
+  platforms,
+  fetchFromApi,
+} from '@/app/constants';
+import React, { useEffect } from 'react';
 import Select from 'react-select';
 
-const placeholder = 'Sort by';
-
-const sortBy = [
-  { value: 'Name', label: 'Name' },
-  { value: 'Popularity', label: 'Popularity' },
-  { value: 'Relevance', label: 'Relevance' },
-  { value: 'Date added', label: 'Date added' },
-  { value: 'Release date', label: 'Release date' },
-  { value: 'Average rating', label: 'Average rating' },
-];
-
-const platforms = [
-  { value: 'PC', label: 'PC' },
-  { value: 'Xbox', label: 'Xbox' },
-  { value: 'Nintendo', label: 'Nintendo' },
-  { value: 'Playstation', label: 'Playstation' },
-];
-
 const Body = () => {
+  useEffect(() => {
+    fetchFromApi();
+  }, []);
+
   return (
     <>
       <div className="w-screen flex flex-col text-center grow">
