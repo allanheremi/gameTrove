@@ -1,7 +1,5 @@
 'use client';
 import {
-  placeholder,
-  BASE_URL,
   sortBy,
   platforms,
   fetchFromApi,
@@ -25,11 +23,12 @@ const Body = () => {
         </p>
 
         <div className="w-full flex justify-center gap-4 py-4 text-black text-sm md:text-lg lg:text-xl">
-          <Select options={sortBy} className="w-2/5" placeholder="Sort by" />
+          <Select options={sortBy} className="w-2/5" placeholder="Sort by" id='sort' />
           <Select
             options={platforms}
             className="w-2/5"
             placeholder="Platform"
+            id='platforms'
           />
         </div>
       </div>

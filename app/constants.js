@@ -1,8 +1,5 @@
 import axios from 'axios';
 
-export const placeholder = 'Sort by';
-export const BASE_URL = 'https://api.rawg.io/api/games';
-
 export const sortBy = [
   { value: 'Name', label: 'Name' },
   { value: 'Popularity', label: 'Popularity' },
